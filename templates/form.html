@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="color:#46092E;">{% block title %} Анкета!{% endblock %}</h1>
+	<h4 style="color:#46092E;"> Пара вопросов о вас: </h4>
+	<form method="get" class="row g-3 needs-validation" data-toggle="validator" >
+		<div class="col">
+			<label for="gender">Выберите ваш пол</label>
+			<select class="form-control" name="gender">
+				<option>ж</option>
+				<option>м</option>
+			</select>
+		</div>
+		<div class="col">
+			<label for="validationServer01">Введите ваш возраст</label>
+			<input type="number" name="age" class="form-control" id="validationServer01" required="true">
+		</div>
+	<h4 style="color:#46092E;"> Теперь, пожалуйста, оцените следующие предложения по шкале от 1 до 5. Пусть 1 = считаю, что так сказать нельзя; 5 = считаю, что так сказать можно. </h4>
+		<div class="col-md-8">
+			<label for="q1">Её исполнение этой песни просто невероятно!</label>
+			<select class="form-control" name="q1">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+		</div>
+		<div class="col-md-8">
+			<label for="q2">Приготовление борща у неё так себе.</label>
+			<select class="form-control" name="q2">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+		</div>
+		<div class="col-md-8">
+			<label for="q3">Что-то составление учебным офисом расписания в последнее время никуда не годится.</label>
+			<select class="form-control" name="q3">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+		</div>
+		<div class="col-md-8">
+			<label for="q4">Тренер остался доволен Васиной пробежкой стометровки.</label>
+			<select class="form-control" name="q4">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+		</div>
+		<h5 style="color:#46092E;"> Пожалуйста, не забудьте сохранить ответы! </h5>
+		<div class="col-12">
+			<button class="btn" style="background-color: #9D4D7D;" type="submit">Сохранить ответы</button>
+		</div>
+	</form>
+{% endblock %}
+
